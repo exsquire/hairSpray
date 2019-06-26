@@ -1,6 +1,5 @@
-    
 #!/bin/bash -l
-#SBATCH -J PermTest_RowParallel
+#SBATCH -J RowParallel
 #SBATCH -N 1
 #SBATCH -c 4
 #SBATCH --array=1-1000
