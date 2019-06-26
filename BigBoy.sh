@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH -J PermTest_MaxCores_SingleRun
+#SBATCH -J BigBoy
 #SBATCH -N 1
 #SBATCH -c 40
 #SBATCH --partition=longmem
@@ -31,9 +31,9 @@ cd $SCR_DIR
 #Copy over everything for permutation Run
 cp -p $WORK_DIR/addcovar.rds .
 cp -p $WORK_DIR/DO2_alleleprob.rds .
-cp -p $WORK_DIR/DO2_permPhenos.rds .
+cp -p $WORK_DIR/samp1000.rds .
 cp -p $WORK_DIR/DO2_kLOCO.rds .
-cp -p $WORK_DIR/PermTest_MaxCores_SingleRun.R .
+cp -p $WORK_DIR/BigBoy.R .
 
 #Confirm presence of input files in scratch
 echo "before srun in dir"
@@ -56,7 +56,7 @@ trap 'termTrap' TERM
 
 #Run lightweight R instance
 #Adding arguments, separate by spaces: taskid, ncores, nperm
-srun R --vanilla --no-save --args "40" <  ./PermTest_MaxCores_SingleRun.R
+srun R --vanilla --no-save --args "40 1000" <  ./BigBoy.R
 
 #Confirm that output made it
 echo "after srun, directory"
