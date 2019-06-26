@@ -59,7 +59,7 @@ trap 'termTrap' TERM
 #Run lightweight R instance
 #Adding arguments, separate by spaces: taskid, ncores = 4, taskid controls perm
 #Run a single block, allow controller to assign block dimensions
-srun R --vanilla --no-save --args "$SLURM_ARRAY_TASK_ID 4 1" <  ./BlockWise.R
+srun R --vanilla --no-save --args "$SLURM_ARRAY_TASK_ID 4" <  ./BlockWise.R
 
 #Confirm that output made it
 echo "after srun, directory"
