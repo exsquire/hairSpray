@@ -33,7 +33,7 @@ cd $SCR_DIR
 #Copy over everything for permutation Run
 cp -p $WORK_DIR/addcovar.rds .
 cp -p $WORK_DIR/DO2_alleleprob.rds .
-cp -p $WORK_DIR/DO2_permPhenos.rds .
+cp -p $WORK_DIR/samp1000.rds .
 cp -p $WORK_DIR/DO2_kLOCO.rds .
 cp -p $WORK_DIR/RowParallel.R .
 
@@ -70,7 +70,7 @@ echo scr=$SCR_DIR
 # Copy results over 
 cd $OUTPUT_DIR
 #change to output directory (now the pwd)
-cp -p $SCR_DIR/permOut_Row* .
+cp -p $SCR_DIR/permOut_row* .
 
 #Routine Scratch Cleanup
 rm -rf $SCR_DIR/*
