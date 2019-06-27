@@ -40,4 +40,4 @@ out <- data.frame(perm, check.names = F)
 
 
 #can also save "out" data
-saveRDS(out, file = paste0("DO2perm_addcov_",arrayid,".rds"))
+saveRDS(out, file = paste0("permOut_block",arrayid,".rds"))
