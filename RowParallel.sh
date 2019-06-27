@@ -12,8 +12,8 @@
 
 #Run script out of 'scripts' folder 
 #Requires a project/{input,output,scripts,config} folder structure
-#SBATCH -o ../config/Perm-%A_%a.out
-#SBATCH -e ../config/Perm-%A_%a.err
+#SBATCH -o ../config/RowParallel-%A_%a.out
+#SBATCH -e ../config/RowParallel-%A_%a.err
 
 #SciNet Ceres scratch designation
 export SCR_DIR=/local/scratch/$USER/$SLURM_JOBID/$SLURM_ARRAY_TASK_ID
