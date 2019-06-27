@@ -18,10 +18,10 @@ ncore <- args[2]
 print(ncore)
 
 perms <- args[3]
-print(perms)
+print(perms) #Should equal 1
 
 #Run the permutation test
-permOut <- scan1perm(apr, phen[,arrayid, drop = FALSE],
+permOut <- scan1perm(apr, phen,
                      kinship = kLOCO,
                      addcovar = covar, 
                      n_perm = perms,
