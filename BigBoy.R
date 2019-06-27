@@ -22,6 +22,6 @@ permOut <- scan1perm(apr, phen,
                      kinship = kLOCO,
                      addcovar = covar, 
                      n_perm = perms,
-                     cores = ncores)
+                     cores = ncore)
 
 saveRDS(permOut, file = "permOut_SingleRun.rds")
